@@ -1,0 +1,2 @@
+"0","# Mostrar filas donde Ingreso es negativo o mayor a 100"
+"0","data_limpia[data_limpia$Edad <= 0 | data_limpia$Edad >100, ]"

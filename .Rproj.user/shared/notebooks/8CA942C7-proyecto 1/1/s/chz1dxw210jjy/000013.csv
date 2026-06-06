@@ -1,0 +1,6 @@
+"0","tabla_genero<- as.data.frame(sort(table(data$Genero),"
+"0","                                      decreasing = TRUE)) # convertir en data frame"
+"0",""
+"0","colnames(tabla_genero) <- c(""Genero"", ""Frecuencia"")#colocar rótulos a la tabla"
+"0",""
+"0","tabla_genero"

@@ -1,0 +1,4 @@
+"0","# Eliminar filas duplicadas ignorando la columna ID"
+"0",""
+"0","data_sin <- data[!duplicated(data[ , -1]), ]"
+"0","head(data_sin)"

@@ -1,0 +1,6 @@
+"0","library(writexl)"
+"0",""
+"0","write_xlsx(data_sin_errores,"
+"0","           ""D:/Diego/Especializacion IA/Ciencia de Datos y Aprendizaje Automatico para la toma de decisiones/Sesion 1/limpieza de datos/Resultados/data_listos.xlsx"")"
+"0",""
+"0",""

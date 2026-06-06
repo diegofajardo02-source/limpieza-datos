@@ -1,0 +1,152 @@
+---
+title: "limpieza datos Data"
+author: "Diego Fajardo"
+date: "2026-06-06"
+output: html_document
+---
+
+
+4. Cargar los Datos
+#Verificar que se tienen el archivo a trabajar en la carpeta Datos
+
+
+```{r}
+list.files("../Datos") #Verificar que archivos están en el proyecto
+```
+```{r}
+library(readr)# para leer archivos excel, csv
+#library(data.table)#
+```
+```{r}
+
+```
+
+
+```{r}
+data <- read.csv("D:/Diego/Especializacion IA/Ciencia de Datos y Aprendizaje Automatico para la toma de decisiones/Sesion 1/limpieza de datos/Datos/dataset_clase_1.csv")
+
+
+```
+
+# data
+```{r}
+```
+
+
+```{r}
+# data
+```
+```{r}
+tail(data) # últimos datos
+```
+```{r}
+head(data) # primeros datos
+```
+```{r}
+dim(data)
+## [1] 30 12
+```
+
+```{r}
+colnames(data)
+```
+
+```{r}
+str(data)
+```
+```{r}
+freq_profesion <- table(data$Profesion)
+
+freq_profesion
+```
+```{r}
+tabla_profesion <- data.frame(sort(table(data$Profesion),
+                                      decreasing = TRUE))
+
+colnames(tabla_profesion) <- c("Profesion", "Frecuencia")
+
+tabla_profesion
+```
+```{r}
+tabla_genero<- as.data.frame(sort(table(data$Genero),
+                                      decreasing = TRUE)) # convertir en data frame
+
+colnames(tabla_genero) <- c("Genero", "Frecuencia")#colocar rótulos a la tabla
+
+tabla_genero
+```
+```{r}
+tabla_ciudad<- data.frame(sort(table(data$Ciudad),
+                                      decreasing = TRUE))
+
+colnames(tabla_ciudad) <- c("Ciudad", "Frecuencia")
+
+tabla_ciudad
+```
+```{{r echo=FALSE}}
+
+tabla_nivel_educativo<- data.frame(sort(table(data$Nivel_Educativo),
+                                      decreasing = TRUE))
+
+colnames(tabla_nivel_educativo) <- c("Nivel Educativo", "Frecuencia")
+
+tabla_nivel_educativo
+```
+```{r}
+tabla_estado_civil<- data.frame(sort(table(data$Estado_Civil),
+                                      decreasing = TRUE))
+
+colnames(tabla_estado_civil) <- c("Estado", "Frecuencia")
+
+tabla_estado_civil
+```
+```{r}
+summary(data$Edad)
+```
+
+```{r}
+summary(data$Ingreso)
+```
+
+```{r}
+library(ggplot2)
+
+boxplot(
+  data$Ingreso,
+  horizontal = TRUE,
+  col = "skyblue",
+  border = "darkblue",
+  main = "Cajas y Bigotes de Ingresos",
+  xlab = "Ingreso"
+)
+```
+```{r}
+boxplot(
+  data$Edad,
+  horizontal = TRUE,
+  col = "skyblue",
+  border = "darkblue",
+  main = "Cajas y Bigotes de Edad",
+  xlab = "Edad"
+)
+```
+```{r}
+hist(
+  data$Edad,
+  col = "skyblue",
+  border = "darkblue",
+  main = "Cajas y Bigotes de Edad",
+  xlab = "Edad"
+)
+```
+
+```{r}
+hist(
+  data$Ingreso,
+  col = "skyblue",
+  border = "darkblue",
+  main = "Cajas y Bigotes de Ingresos",
+  xlab = "Ingresos"
+)
+```
+

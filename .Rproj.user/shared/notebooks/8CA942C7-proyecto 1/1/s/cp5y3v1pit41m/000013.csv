@@ -1,0 +1,7 @@
+"0","hist("
+"0","  data$Edad,"
+"0","  col = ""skyblue"","
+"0","  border = ""darkblue"","
+"0","  main = ""Cajas y Bigotes de Edad"","
+"0","  xlab = ""Edad"""
+"0",")"
